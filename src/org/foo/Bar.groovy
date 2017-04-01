@@ -1,8 +1,6 @@
 #!groovy
 package org.foo;
 
-class Bar {
-    def hello(world) {
-        echo "hello, ${world}"
-    }
+def sayHello(world) {
+    echo "hello, ${world}"
 }
