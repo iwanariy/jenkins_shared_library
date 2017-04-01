@@ -1,6 +1,6 @@
 #!groovy
 package org.foo;
 
-def sayHello(world) {
+static def sayHello(world) {
     echo "hello, ${world}"
 }
