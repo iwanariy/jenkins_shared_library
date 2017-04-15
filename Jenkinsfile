@@ -1,14 +1,18 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven:3.3.9-jdk-8'
-    }
-    
-  }
+  agent any
   stages {
     stage('Initialize') {
       steps {
-        echo 'hello, Jenkins Visual Pipeline Editor'
+        parallel(
+          "Initialize": {
+            echo 'hello, Jenkins Visual Pipeline Editor'
+            
+          },
+          "Initialize2": {
+            echo 'Hi, Pipeline'
+            
+          }
+        )
       }
     }
   }
